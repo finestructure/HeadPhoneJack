@@ -13,6 +13,7 @@
 		5A4B43761A77EC50001E5D46 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B43751A77EC50001E5D46 /* Images.xcassets */; };
 		5A4B43791A77EC50001E5D46 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4B43771A77EC50001E5D46 /* LaunchScreen.xib */; };
 		5A4B43851A77EC50001E5D46 /* HeadPhoneJackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B43841A77EC50001E5D46 /* HeadPhoneJackTests.swift */; };
+		5A4B438F1A77F0F1001E5D46 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4B438E1A77F0F1001E5D46 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		5A4B437E1A77EC50001E5D46 /* HeadPhoneJackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeadPhoneJackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4B43831A77EC50001E5D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A4B43841A77EC50001E5D46 /* HeadPhoneJackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadPhoneJackTests.swift; sourceTree = "<group>"; };
+		5A4B438E1A77F0F1001E5D46 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4B438F1A77F0F1001E5D46 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		5A4B43601A77EC50001E5D46 = {
 			isa = PBXGroup;
 			children = (
+				5A4B438E1A77F0F1001E5D46 /* AVFoundation.framework */,
 				5A4B436B1A77EC50001E5D46 /* HeadPhoneJack */,
 				5A4B43811A77EC50001E5D46 /* HeadPhoneJackTests */,
 				5A4B436A1A77EC50001E5D46 /* Products */,
@@ -161,6 +165,7 @@
 				TargetAttributes = {
 					5A4B43681A77EC50001E5D46 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 45TWE6N5C2;
 					};
 					5A4B437D1A77EC50001E5D46 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -336,9 +341,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeadPhoneJack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -346,9 +354,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HeadPhoneJack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

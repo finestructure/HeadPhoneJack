@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="HeadPhoneJack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,56 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wg-VR-JWa">
+                                <rect key="frame" x="100" y="285" width="400" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Q5a-dj-BeZ"/>
+                                    <constraint firstAttribute="width" constant="400" id="f84-N9-vM2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akd-bL-bCZ">
+                                <rect key="frame" x="257" y="322" width="85" height="30"/>
+                                <state key="normal" title="Check State">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkState:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SiM-cF-wHS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5wg-VR-JWa" secondAttribute="centerX" id="03N-hd-42Z"/>
+                            <constraint firstItem="5wg-VR-JWa" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="0PH-mv-09X"/>
+                            <constraint firstAttribute="centerY" secondItem="5wg-VR-JWa" secondAttribute="centerY" constant="0.5" id="8Bu-pA-aRu"/>
+                            <constraint firstItem="5wg-VR-JWa" firstAttribute="centerX" secondItem="Akd-bL-bCZ" secondAttribute="centerX" id="9Jj-Q8-UVF"/>
+                            <constraint firstItem="5wg-VR-JWa" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="Ohr-Ve-bn0"/>
+                            <constraint firstItem="5wg-VR-JWa" firstAttribute="centerY" secondItem="Akd-bL-bCZ" secondAttribute="centerY" id="Z7r-cR-txV"/>
+                            <constraint firstItem="5wg-VR-JWa" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="bhR-Ek-duh"/>
+                            <constraint firstItem="5wg-VR-JWa" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="j7Y-W1-RYb"/>
+                            <constraint firstItem="Akd-bL-bCZ" firstAttribute="top" secondItem="5wg-VR-JWa" secondAttribute="bottom" constant="8" id="laS-RN-Njo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0PH-mv-09X"/>
+                                <exclude reference="Ohr-Ve-bn0"/>
+                                <exclude reference="Z7r-cR-txV"/>
+                                <exclude reference="bhR-Ek-duh"/>
+                                <exclude reference="j7Y-W1-RYb"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="5wg-VR-JWa" id="S5h-zO-w5m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="435" y="415"/>
         </scene>
     </scenes>
 </document>

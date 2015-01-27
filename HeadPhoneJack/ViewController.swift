@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.label.text = ""
+        self.checkState(self)
+        
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserverForName("AVAudioSessionRouteChangeNotification", object: nil, queue: NSOperationQueue.mainQueue()) { notification in
+            self.checkState(self)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func checkState(sender: AnyObject) {
+        let route = AVAudioSession.sharedInstance().currentRoute
+        for output in route.outputs {
+            NSLog("output: \(output)")
+            if let desc = output as? AVAudioSessionPortDescription {
+                self.label.text = desc.portName
+            }
+        }
     }
-
-
+    
 }
 
